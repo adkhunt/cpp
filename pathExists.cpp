@@ -13,9 +13,9 @@ typedef struct position{
 } position;
 
 map<char, pair<int, int>> direction = {{'r', make_pair(0, 1)},
-											            		{'l', make_pair(0, -1)},
-									             				{'u', make_pair(-1, 0)},
-								            					{'d', make_pair(1, 0)}};
+					{'l', make_pair(0, -1)},
+					{'u', make_pair(-1, 0)},
+					{'d', make_pair(1, 0)}};
 
 bool DFS(vector<vector<int>> mat, int row_size, int col_size,
 			vector<vector<bool>> &isVisited, char dir,
@@ -82,9 +82,9 @@ bool canReachToTarget(vector<vector<int>> mat, position cord){
 int main(){
 
 	vector<vector<int>> mat = {{1, 1, 0, 0},
-									        	{1, 0, 0, 0},
-							        			{1, 0, 1, 1},
-						        				{1, 0, 0, 0}};
+				{1, 0, 0, 0},
+				{1, 0, 1, 1},
+				{1, 0, 0, 0}};
 	position cords;
 	cords.start = make_pair(0, 3);
 	cords.end = make_pair(3, 3);
