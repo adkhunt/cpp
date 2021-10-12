@@ -13,7 +13,7 @@ typedef struct res{
 	bool isFound;
 } result;
 
-void BFS(vector<vector<int>> mat, int row_size, int col_size,
+void DFS(vector<vector<int>> mat, int row_size, int col_size,
 			int cur_row, int cur_col, vector<int> array,
 			int index, result &res, vector<vector<bool>> isVisited){
 
@@ -49,7 +49,7 @@ void BFS(vector<vector<int>> mat, int row_size, int col_size,
 			 row_to_explore < row_size && col_to_explore < col_size){
 			if(mat[row_to_explore][col_to_explore] == array[index+1] &&
 				!isVisited[row_to_explore][col_to_explore]){
-				BFS(mat, row_size, col_size, row_to_explore, col_to_explore,
+				DFS(mat, row_size, col_size, row_to_explore, col_to_explore,
 					 array, index+1, res, isVisited);
 				if (res.isFound){
 					return;
@@ -67,7 +67,7 @@ result findArrayInMat(vector<vector<int>> mat, int row,
 		for(int j = 0 ; j < col ; ++j){
 			if (mat[i][j] == array[0]){
 				vector<vector<bool>> isVisited(row, vector<bool> (col, false));
-				BFS(mat, row, col, i, j, array, 0, res, isVisited);
+				DFS(mat, row, col, i, j, array, 0, res, isVisited);
 
 				if (res.isFound){
 					res.start_index.first = i;
