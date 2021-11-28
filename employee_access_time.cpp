@@ -72,7 +72,7 @@ map<string, vector<int>> get_eligible_emp(vector<pair<string, string>> badge_tim
 int main(){
 
 	vector<pair<string, string>> badge_times = {
-    {"Paul",      "1355"}, {"Jennifer",  "1910"}, {"Jose",    "835"},
+    		{"Paul", "1355"}, {"Jennifer",  "1910"}, {"Jose",    "835"},
 		{"Jose",       "830"}, {"Paul",      "1315"}, {"Chloe",     "0"},
 		{"Chloe",     "1910"}, {"Jose",      "1615"}, {"Jose",   "1640"},
 		{"Paul",      "1405"}, {"Jose",       "855"}, {"Jose",    "930"},
