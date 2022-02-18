@@ -90,8 +90,8 @@ string getLongestWord(vector<vector<char>> board, vector<string> dictionary){
 int main() {
 
 	vector<vector<char>> board = {{'A', 'B', 'C'},
-											{'X', 'O', 'T'},
-											{'Y', 'Z', 'P'}};
+					{'X', 'O', 'T'},
+					{'Y', 'Z', 'P'}};
 
 	vector<string> dictionary = {"AXY", "BOX", "BOXYZ", "CTPZ"};
 
